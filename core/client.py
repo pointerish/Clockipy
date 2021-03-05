@@ -16,3 +16,15 @@ class Client:
 
     def get_current_user(self) -> dict:
         return requests.get(f'{constants.BASE_URL}/user', headers=self.header).json()
+
+    def get_workspaces(self) -> dict:
+        return requests.get(f'{constants.BASE_URL}/workspaces', headers=self.header).json()
+
+    def get_projects(self, workspace: str) -> dict:
+        pass
+
+    def get_time_entries(self, project: str) -> dict:
+        pass
+
+    def set_time_entries(self, project: str, start_end: tuple) -> None:
+        pass
